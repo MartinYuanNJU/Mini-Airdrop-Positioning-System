@@ -1,0 +1,13 @@
+只能显示英文和数字，发送英文短信，字模是直接烧写进FLASH的
+
+USART1 ->GPS(PA9是TX->GPS的RX;PA10是RX->GPS的TX,优先级是3,1)
+USART2 ->PC(PA3是RX->USB转TTL的TX;PA2是TX->USB转TTL的RX,优先级是1,1)
+USART3 ->GSM(PB11是RX->GSM的ST;PB10是TX->GSM的SR,优先级是0,1)
+
+SIM800模块串口连接的是中间三个，不接VMCU
+JTAG：keil5在线debug选择CMSIS-DAP仿真器
+
+系统板跳线帽需要连接好，使用ST-LINK下载程序，连接系统板上P1：TCK,TMS,GND
+
+我的电脑stdint.h找不到要把D:\study\MDK5\ARM\ARMCC\include和lib添加进去
+
